@@ -3,12 +3,9 @@ package com.example.intent;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-
-import java.sql.Array;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_SUBJECT, sub);
         intent.putExtra(Intent.EXTRA_TEXT, mess);
 
-        if (intent.resolveActivity(getPackageManager()) != null) {
+        if (null != intent.resolveActivity(getPackageManager())) {
             startActivity(intent);
         }
         }

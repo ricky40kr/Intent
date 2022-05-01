@@ -1,55 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
+    android:layout_margin="10dp"
     >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TO"
-        android:textStyle="bold"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        style="@style/customText"
+        android:text="@string/_to"/>
 
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email Address"/>
+        android:hint="@string/email_add"
+        android:autofillHints=""
+        android:inputType="textEmailAddress" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/customText"
         android:layout_marginTop="30dp"
-        android:text="Subject"
-        android:textStyle="bold"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        android:text="@string/_sub"/>
 
     <EditText
         android:id="@+id/subject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Subject"/>
+        android:hint="@string/_sub"
+        android:autofillHints=""
+        android:inputType="text"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Message"
-        android:layout_marginTop="30dp"
-        android:textStyle="bold"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        style="@style/customText"
+        android:text="@string/_message"
+        android:layout_marginTop="30dp"/>
 
     <EditText
         android:id="@+id/message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Type your message here..."
+        android:hint="@string/message_desc"
         android:lines="10"
-        android:gravity="start"/>
+        android:gravity="start"
+        android:autofillHints=""
+        android:inputType="textMultiLine"/>
 
     <Button
         android:id="@+id/press"
@@ -57,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="submit"
-        android:text="send"
-        android:layout_marginTop="30dp"/>
+        android:text="@string/_send"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""/>
 </LinearLayout>

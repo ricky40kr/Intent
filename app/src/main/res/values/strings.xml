@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Intent</string>
+    <string name="_to">TO</string>
+    <string name="email_add">Email Address</string>
+    <string name="_sub">Subject</string>
+    <string name="_message">Message</string>
+    <string name="message_desc">Type your message here...</string>
+    <string name="_send">send</string>
 </resources>
